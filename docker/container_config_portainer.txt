@@ -1,0 +1,294 @@
+{
+    "AppArmorProfile": "",
+    "Args": [
+        "-g",
+        "--",
+        "start-notebook.sh"
+    ],
+    "Config": {
+        "AttachStderr": false,
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "Cmd": [
+            "start-notebook.sh"
+        ],
+        "Domainname": "",
+        "Entrypoint": [
+            "tini",
+            "-g",
+            "--"
+        ],
+        "Env": [
+            "JUPYTER_ENABLE_LAB=yes",
+            "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/spark/bin",
+            "DEBIAN_FRONTEND=noninteractive",
+            "CONDA_DIR=/opt/conda",
+            "SHELL=/bin/bash",
+            "NB_USER=jovyan",
+            "NB_UID=1000",
+            "NB_GID=100",
+            "LC_ALL=en_US.UTF-8",
+            "LANG=en_US.UTF-8",
+            "LANGUAGE=en_US.UTF-8",
+            "HOME=/home/jovyan",
+            "XDG_CACHE_HOME=/home/jovyan/.cache/",
+            "APACHE_SPARK_VERSION=3.1.2",
+            "HADOOP_VERSION=3.2",
+            "SPARK_HOME=/usr/local/spark",
+            "SPARK_OPTS=--driver-java-options=-Xms1024M --driver-java-options=-Xmx4096M --driver-java-options=-Dlog4j.logLevel=info"
+        ],
+        "ExposedPorts": {
+            "8888/tcp": {}
+        },
+        "Hostname": "cb3a61bfe7f7",
+        "Image": "jupyter/pyspark-notebook:latest",
+        "Labels": {
+            "maintainer": "Jupyter Project <jupyter@googlegroups.com>"
+        },
+        "OnBuild": null,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Tty": false,
+        "User": "1000",
+        "Volumes": {
+            "/home/jovyan/work": {}
+        },
+        "WorkingDir": "/home/jovyan"
+    },
+    "Created": "2021-09-25T17:34:18.601581838Z",
+    "Driver": "overlay2",
+    "ExecIDs": null,
+    "GraphDriver": {
+        "Data": {
+            "LowerDir": "/var/lib/docker/overlay2/a9bfc935b7933d18ef988c0c1853b42ce3273875faef30a816c72cc326d6a618-init/diff:/var/lib/docker/overlay2/5e794abaab579e6066e03691bfb2b082705bae86f5a49fcd1d42541ce06892b4/diff:/var/lib/docker/overlay2/89ca74a1148a91d91af475a79093ddec4c5a1da140840a2b172e369f3e2818b0/diff:/var/lib/docker/overlay2/15220a1e2feb27e59285959be51b855fb60679de8b2999c4492180a5401afad2/diff:/var/lib/docker/overlay2/f88413656df0a9e6c49015d8efa97b509f6ce16de802828d2db9189c93fdd6e4/diff:/var/lib/docker/overlay2/9f60c2e923a2a7692e65653b1b79b1fa3cba6f85a4b158402af7add28a4f6983/diff:/var/lib/docker/overlay2/6e0eb9c732012c8125734c7a99fbb5ce10af80c0ff8c563b00fc2ff4874f00a1/diff:/var/lib/docker/overlay2/24e07249f023d5738b35d7e5600e60379cdf817c653ce157e19ff7cab0ba4ca6/diff:/var/lib/docker/overlay2/41e43a774c774333d8a5e19a5391de08fc60d3565e4f3be5d10dfaad686dd034/diff:/var/lib/docker/overlay2/67945daeb3de32a5e4b8ec44d3a1d2c3ca3ed32d5b63cc4434abd4855d8b1941/diff:/var/lib/docker/overlay2/1fb4d197bbd732e81c1e6f68b3b4cd8f93563ff33b3693cbb7001bd9140ab179/diff:/var/lib/docker/overlay2/2a7f84bb45d005e692970a09986f5d97bf9d34c7cc287f4c03da9093d5d660c9/diff:/var/lib/docker/overlay2/02dfbbea8f1ed444e25d62e9fe4204f812a41a2a0154d1f812e8f19c9c70d754/diff:/var/lib/docker/overlay2/84e9fc84c2a96d87652d61edbff599b89d67f600e85d39ff89b5e1f858a92875/diff:/var/lib/docker/overlay2/a3a4a149a63f99a6eca3ac15fd5fc202ed13c1eb469fce8de7766465c20a090d/diff:/var/lib/docker/overlay2/f1709df631c757b1f77ed8de208b9ba51bc56269a5431e4703424b29006a8e32/diff:/var/lib/docker/overlay2/094e0020b390ae8e784017aca0f27c98a5d7957b1e554681d704e5a233d3efb2/diff:/var/lib/docker/overlay2/9dc7225d9f5490f064850195c278d3b28a1bddceeb6047d9f7212228422aad24/diff:/var/lib/docker/overlay2/d100cee8723231cee0579c0b4f470596d07dc4e7d971c3b586ce0fe44d990662/diff:/var/lib/docker/overlay2/b8a1202cb4a56524e1b566260346275b8d83d25bc1a57fd51bbcbb73dd094919/diff:/var/lib/docker/overlay2/60d50ec513220cc8babc9dc3c6352f623408697c1097786a48d3aaf7dbc52230/diff:/var/lib/docker/overlay2/b36d9733ecebc673b07640dbe40cb4e1f83e60bdb35ea83c22c0d057698b7937/diff:/var/lib/docker/overlay2/2e6dae974100615962812324c60736bbdae32e4095ddca2931280e1c081a6e78/diff",
+            "MergedDir": "/var/lib/docker/overlay2/a9bfc935b7933d18ef988c0c1853b42ce3273875faef30a816c72cc326d6a618/merged",
+            "UpperDir": "/var/lib/docker/overlay2/a9bfc935b7933d18ef988c0c1853b42ce3273875faef30a816c72cc326d6a618/diff",
+            "WorkDir": "/var/lib/docker/overlay2/a9bfc935b7933d18ef988c0c1853b42ce3273875faef30a816c72cc326d6a618/work"
+        },
+        "Name": "overlay2"
+    },
+    "HostConfig": {
+        "AutoRemove": false,
+        "Binds": [
+            "D:\\projects\\portainer-host-bind\\pysparknotebook:/home/jovyan/work"
+        ],
+        "BlkioDeviceReadBps": null,
+        "BlkioDeviceReadIOps": null,
+        "BlkioDeviceWriteBps": null,
+        "BlkioDeviceWriteIOps": null,
+        "BlkioWeight": 0,
+        "BlkioWeightDevice": null,
+        "CapAdd": [
+            "AUDIT_WRITE",
+            "CHOWN",
+            "DAC_OVERRIDE",
+            "FOWNER",
+            "FSETID",
+            "KILL",
+            "MKNOD",
+            "NET_BIND_SERVICE",
+            "NET_RAW",
+            "SETFCAP",
+            "SETGID",
+            "SETPCAP",
+            "SETUID",
+            "SYS_CHROOT"
+        ],
+        "CapDrop": [
+            "AUDIT_CONTROL",
+            "BLOCK_SUSPEND",
+            "DAC_READ_SEARCH",
+            "IPC_LOCK",
+            "IPC_OWNER",
+            "LEASE",
+            "LINUX_IMMUTABLE",
+            "MAC_ADMIN",
+            "MAC_OVERRIDE",
+            "NET_ADMIN",
+            "NET_BROADCAST",
+            "SYSLOG",
+            "SYS_ADMIN",
+            "SYS_BOOT",
+            "SYS_MODULE",
+            "SYS_NICE",
+            "SYS_PACCT",
+            "SYS_PTRACE",
+            "SYS_RAWIO",
+            "SYS_RESOURCE",
+            "SYS_TIME",
+            "SYS_TTY_CONFIG",
+            "WAKE_ALARM"
+        ],
+        "Cgroup": "",
+        "CgroupParent": "",
+        "CgroupnsMode": "host",
+        "ConsoleSize": [
+            0,
+            0
+        ],
+        "ContainerIDFile": "",
+        "CpuCount": 0,
+        "CpuPercent": 0,
+        "CpuPeriod": 0,
+        "CpuQuota": 0,
+        "CpuRealtimePeriod": 0,
+        "CpuRealtimeRuntime": 0,
+        "CpuShares": 0,
+        "CpusetCpus": "",
+        "CpusetMems": "",
+        "DeviceCgroupRules": null,
+        "DeviceRequests": null,
+        "Devices": [],
+        "Dns": [],
+        "DnsOptions": [],
+        "DnsSearch": [],
+        "ExtraHosts": [],
+        "GroupAdd": null,
+        "IOMaximumBandwidth": 0,
+        "IOMaximumIOps": 0,
+        "Init": false,
+        "IpcMode": "private",
+        "Isolation": "",
+        "KernelMemory": 0,
+        "KernelMemoryTCP": 0,
+        "Links": null,
+        "LogConfig": {
+            "Config": {},
+            "Type": "json-file"
+        },
+        "MaskedPaths": [
+            "/proc/asound",
+            "/proc/acpi",
+            "/proc/kcore",
+            "/proc/keys",
+            "/proc/latency_stats",
+            "/proc/timer_list",
+            "/proc/timer_stats",
+            "/proc/sched_debug",
+            "/proc/scsi",
+            "/sys/firmware"
+        ],
+        "Memory": 0,
+        "MemoryReservation": 0,
+        "MemorySwap": 0,
+        "MemorySwappiness": null,
+        "NanoCpus": 0,
+        "NetworkMode": "bridge",
+        "OomKillDisable": false,
+        "OomScoreAdj": 0,
+        "PidMode": "",
+        "PidsLimit": null,
+        "PortBindings": {
+            "8888/tcp": [
+                {
+                    "HostIp": "",
+                    "HostPort": "8889"
+                }
+            ]
+        },
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "ReadonlyPaths": [
+            "/proc/bus",
+            "/proc/fs",
+            "/proc/irq",
+            "/proc/sys",
+            "/proc/sysrq-trigger"
+        ],
+        "ReadonlyRootfs": false,
+        "RestartPolicy": {
+            "MaximumRetryCount": 0,
+            "Name": "no"
+        },
+        "Runtime": "runc",
+        "SecurityOpt": null,
+        "ShmSize": 67108864,
+        "UTSMode": "",
+        "Ulimits": null,
+        "UsernsMode": "",
+        "VolumeDriver": "",
+        "VolumesFrom": null
+    },
+    "HostnamePath": "/var/lib/docker/containers/cb3a61bfe7f7254ae06c294286f784c6e663b5ab8940432dffc80331a2a78dd9/hostname",
+    "HostsPath": "/var/lib/docker/containers/cb3a61bfe7f7254ae06c294286f784c6e663b5ab8940432dffc80331a2a78dd9/hosts",
+    "Id": "cb3a61bfe7f7254ae06c294286f784c6e663b5ab8940432dffc80331a2a78dd9",
+    "Image": "sha256:0903b91db49dcd95781ee21e48207ed4429b48dbd351f42183265a693ce8af77",
+    "LogPath": "/var/lib/docker/containers/cb3a61bfe7f7254ae06c294286f784c6e663b5ab8940432dffc80331a2a78dd9/cb3a61bfe7f7254ae06c294286f784c6e663b5ab8940432dffc80331a2a78dd9-json.log",
+    "MountLabel": "",
+    "Mounts": [
+        {
+            "Destination": "/home/jovyan/work",
+            "Mode": "",
+            "Propagation": "rprivate",
+            "RW": true,
+            "Source": "D:\\projects\\portainer-host-bind\\pysparknotebook",
+            "Type": "bind"
+        }
+    ],
+    "Name": "/pyspark",
+    "NetworkSettings": {
+        "Bridge": "",
+        "EndpointID": "5681f04b2bac7df8ede579198e91a10efc3bb3f5e1afe0a24daded52379aeecd",
+        "Gateway": "172.17.0.1",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "HairpinMode": false,
+        "IPAddress": "172.17.0.3",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "LinkLocalIPv6Address": "",
+        "LinkLocalIPv6PrefixLen": 0,
+        "MacAddress": "02:42:ac:11:00:03",
+        "Networks": {
+            "bridge": {
+                "Aliases": null,
+                "DriverOpts": null,
+                "EndpointID": "5681f04b2bac7df8ede579198e91a10efc3bb3f5e1afe0a24daded52379aeecd",
+                "Gateway": "172.17.0.1",
+                "GlobalIPv6Address": "",
+                "GlobalIPv6PrefixLen": 0,
+                "IPAMConfig": {},
+                "IPAddress": "172.17.0.3",
+                "IPPrefixLen": 16,
+                "IPv6Gateway": "",
+                "Links": null,
+                "MacAddress": "02:42:ac:11:00:03",
+                "NetworkID": "c66fda98de5d7c6375b24f87def0685242f168585457b8a6b61137f8c30deb36"
+            }
+        },
+        "Ports": {
+            "8888/tcp": [
+                {
+                    "HostIp": "0.0.0.0",
+                    "HostPort": "8889"
+                },
+                {
+                    "HostIp": "::",
+                    "HostPort": "8889"
+                }
+            ]
+        },
+        "SandboxID": "c0344a33a4d71a32ec637a46913b2ed2d3e123f81bad03badf284e35054c1fd5",
+        "SandboxKey": "/var/run/docker/netns/c0344a33a4d7",
+        "SecondaryIPAddresses": null,
+        "SecondaryIPv6Addresses": null
+    },
+    "Path": "tini",
+    "Platform": "linux",
+    "ProcessLabel": "",
+    "ResolvConfPath": "/var/lib/docker/containers/cb3a61bfe7f7254ae06c294286f784c6e663b5ab8940432dffc80331a2a78dd9/resolv.conf",
+    "RestartCount": 0,
+    "State": {
+        "Dead": false,
+        "Error": "",
+        "ExitCode": 0,
+        "FinishedAt": "2021-10-01T14:57:54.872935686Z",
+        "OOMKilled": false,
+        "Paused": false,
+        "Pid": 11843,
+        "Restarting": false,
+        "Running": true,
+        "StartedAt": "2021-10-01T22:32:59.179945002Z",
+        "Status": "running"
+    }
+}
