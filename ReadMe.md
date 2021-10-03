@@ -14,6 +14,7 @@
 2. Architecture representation in [C4 model](https://c4model.com/)
 3. Current solution is implemented using [Portainer](https://www.portainer.io/) and [PySpark docker](https://hub.docker.com/r/jupyter/pyspark-notebook). Document dockerfile and docker run commands.
 4. Implement Tableau / QuickSight dashboard to interact with data 
+5. Incorporate Non Functional Requirements: Resiliency, Security, Encryption, Access Control into the design
 
 ## Architecture Draft
 ![Architecture Draft](images/arch_1.png)
