@@ -13,8 +13,6 @@
 10. TODO Current solution is implemented using [Portainer](https://www.portainer.io/) and [PySpark docker](https://hub.docker.com/r/jupyter/pyspark-notebook), clean up credentials, update readme with instructions and push to Git
 
 
-
-
 ## Architecture Draft
 ![Architecture Draft](images/arch_1.png)
 
