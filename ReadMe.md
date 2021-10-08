@@ -8,10 +8,13 @@
 5. Also to join across different data sources for batch analytics like Bloomberg data, Wikipedia etc - distributed frameworks are well suited. 
 6. Since S&P500 is primarily a data company, the architecture has a construct of Data Lake Formation template, where Data catalog can be managed through Glue Crawlers. Entitlement management in Producer, Consumer and Central-Lake accounts are not shown. 
 7. MDLC - model training, model artifact management and model promotion / deployment is assumed to be done through components in SageMaker
-8. TODO: Filetune the cache implementation
-9. TODO Architecture representation in [C4 model](https://c4model.com/)
-10. TODO Current solution is implemented using [Portainer](https://www.portainer.io/) and [PySpark docker](https://hub.docker.com/r/jupyter/pyspark-notebook), clean up credentials, update readme with instructions and push to Git
 
+## Todo
+1. Finetune the cache implementation, implement politeness to API call
+2. Architecture representation in [C4 model](https://c4model.com/)
+3. Current solution is implemented using [Portainer](https://www.portainer.io/) and [PySpark docker](https://hub.docker.com/r/jupyter/pyspark-notebook). Document dockerfile and docker run commands.
+4. Implement Tableau / QuickSight dashboard to interact with data 
+5. Incorporate Non Functional Requirements: Resiliency, Security, Encryption, Access Control into the design
 
 ## Architecture Draft
 ![Architecture Draft](images/arch_1.png)
